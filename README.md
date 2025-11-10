@@ -9,6 +9,7 @@ It allows users to manage daily habits, track progress, and receive AI-generated
 
 ### Prerequisites
 - Docker and Docker Compose installed on your system
+- A valid **Hugging Face API Token** for enabling AI recommendation features
 
 ### Run the application
 In the project root directory (`habit-ai/`), execute:
@@ -42,9 +43,19 @@ This account includes **100 habit records**, providing a realistic dataset for e
   ```bash
   docker compose down
   ```
+- To enable AI functionalities, you must provide your **Hugging Face API Token**:
+  1. Create an account at [https://huggingface.co](https://huggingface.co)
+  2. Go to **Settings → Access Tokens**
+  3. Copy your token and add it to your environment file:
+     ```
+     HUGGINGFACE_API_KEY=your_token_here
+     ```
+  4. Restart your containers.
+- Use the provided `.env.example` template to create your own `.env` file.  
+  Rename it to `.env` and fill in the required values such as your Hugging Face API key and database URL.
 
 ---
 
 ## Author
 
-Developed by **Kevin(Kaihuan) Zheng**  
+Developed by **Kevin(Kaihuan) Zheng**
